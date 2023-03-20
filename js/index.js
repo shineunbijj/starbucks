@@ -13,27 +13,6 @@ window.onload=function(){
     }
 };
 
-const searchEl = document.querySelector('.search_bar');
-const searchInputEl = searchEl.querySelector('input');
-console.log(searchEl);
-console.log(searchInputEl);
-
-searchEl.addEventListener(
-    'click', function(){ 
-        searchInputEl.focus() 
-});
-
-searchInputEl.addEventListener(
-    'focus', function(){ 
-        searchEl.classList.add('focused');
-        searchInputEl.setAttribute('placeholder','검색어를 입력해주세요.') 
-});
-searchInputEl.addEventListener(
-    'blur', function(){ 
-        searchEl.classList.remove('focused');
-        searchInputEl.setAttribute('placeholder','') 
-});
-
 // 뱃지------------------------------------------------------------
 const badgEl = document.querySelector('header .badges');
 // console.log(badgEl);
@@ -88,7 +67,7 @@ new Swiper('.notice-line .swiper-container',{
     loop:true, //슬라이드 끝나고 다시 1번으로 돌아오기
 });
 
-// 베너
+// 베너 -----------------------------------------------------------
 new Swiper('.promotion .swiper-container',{
     slidesPerView : 3, //한번에 몇개씩 보여줄건지
     spaceBetween : 20, //슬라이드 사이에 여백 20px
